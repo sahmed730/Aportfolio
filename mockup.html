@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Mockup | Sayyed Umar</title>
+    <!-- Using Outfit font as it closely matches the clean, geometric look of Aeonik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #222222;
+            --secondary: #7B7B7B;
+            --tertiary: #F8F8F8;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--primary);
+            overflow-x: hidden;
+        }
+
+        /* Container & Grid */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4rem;
+            position: relative;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .btn-book {
+            text-decoration: none;
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--primary);
+            padding-bottom: 2px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Hero Layout */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: calc(100vh - 100px);
+            align-items: center;
+            position: relative;
+        }
+
+        /* Vertical Side Text */
+        .side-text {
+            position: absolute;
+            left: -2rem;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            transform-origin: center;
+            color: var(--secondary);
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            display: flex;
+            gap: 4rem;
+        }
+
+        /* Hero Content (Left) */
+        .hero-content {
+            padding-left: 2rem;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-item p {
+            color: var(--secondary);
+            font-size: 0.8rem;
+        }
+
+        .hero-title {
+            font-size: 8rem;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -3px;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hero-subtitle::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: var(--secondary);
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 4rem;
+            left: 2rem;
+            color: var(--secondary);
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+
+        /* Hero Image (Right) */
+        .hero-image-container {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image-container img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: cover;
+            /* Added a subtle grayscale effect to match the reference vibe */
+            filter: grayscale(100%) contrast(1.1);
+        }
+        
+        /* Subtle background blob/shape behind image like in reference */
+        .hero-image-container::before {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            background-color: var(--tertiary);
+            border-radius: 50%;
+            z-index: -1;
+            top: 10%;
+            right: 10%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">Sayyed Umar</div>
+            <div class="nav-links">
+                <a href="#">About Me</a>
+                <a href="#">Experience</a>
+                <a href="#">Projects</a>
+                <a href="#">Skills</a>
+            </div>
+            <a href="#" class="btn-book">Contact Me ↗</a>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            
+            <div class="side-text">
+                <span>Data Specialist</span>
+                <span>2024</span>
+            </div>
+
+            <!-- Left Content -->
+            <div class="hero-content">
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <h3>+40%</h3>
+                        <p>Efficiency Improved</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>+3</h3>
+                        <p>Enterprise Dashboards</p>
+                    </div>
+                </div>
+
+                <h1 class="hero-title">Hello</h1>
+                
+                <div class="hero-subtitle">
+                    It's Sayyed a BI wizard
+                </div>
+
+                <a href="#" class="scroll-down">Scroll down ↓</a>
+            </div>
+
+            <!-- Right Image -->
+            <div class="hero-image-container">
+                <!-- Using the photo you provided -->
+                <img src="src/assets/profile-pic.png" alt="Sayyed Umar Portrait">
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
